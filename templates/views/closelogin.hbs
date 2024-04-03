@@ -1,0 +1,21 @@
+  {{>header}}
+   <title>Account close Form</title>
+</head>
+<body>
+    {{>navbar}}
+  <div class="container">
+    <form id="login-form" action="/closelogin" method="POST">
+      <h2>Close Account Form</h2>
+      <div class="form-group">
+        <label for="admission">Admission_no:</label>
+        <input type="text" id="admission" name="admission" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">DELETE ACCOUNT</button>
+    </form>
+  </div>
+</body>
+</html>

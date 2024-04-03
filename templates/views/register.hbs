@@ -1,0 +1,60 @@
+  {{>header}}
+  <title>Signup Form</title>
+</head>
+<body>
+  {{>navbar}}
+  <div class="container">
+      <form id="signup-form" method="POST" action="/register">
+        <h2>Signup</h2>
+        <div class="form-group">
+          <label for="admission">Admission Number:</label>
+          <input type="text" id="admission" name="admission" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label for="course">Course:</label>
+          <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="mtech">M.Tech</option>
+            <option value="btech">B.Tech</option>
+            <option value="phd">PhD</option>
+            <option value="mstech">M.Sc Tech</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Atleast one capital,one number,one special charcter,mininum length 4"  required>
+        </div>
+        <div class="form-group">
+          <label for="cpassword">Confirm Password:</label>
+          <input type="password" id="cpassword" name="cpassword" required>
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+  </div>
+
+</body>
+</html>

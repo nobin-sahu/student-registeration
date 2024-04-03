@@ -1,0 +1,53 @@
+  {{>header}}
+  <title>update data form</title>
+</head>
+<body>
+  {{>navbar}}
+  <div class="container">
+      <form id="signup-form" method="POST" action="/updatedata">
+        <h2>Please Fill those Field u want to Update</h2>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" >
+        </div>
+        <div class="form-group">
+          <label for="course">Course:</label>
+          <select id="course" name="course" >
+            <option value="">Select a course</option>
+            <option value="mtech">M.Tech</option>
+            <option value="btech">B.Tech</option>
+            <option value="phd">PhD</option>
+            <option value="mstech">M.Sc Tech</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" >
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Atleast one capital,one number,one special charcter,mininum length 4" >
+        </div>
+
+        <button type="submit">Update Data</button>
+      </form>
+  </div>
+
+</body>
+</html>

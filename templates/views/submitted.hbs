@@ -1,0 +1,21 @@
+  {{>header}}
+  <title>Submitted Data</title>
+</head>
+<body>
+  <div class="container">
+    <h2>User Data</h2>
+    <div class="user-data">
+      <p><strong>Admission No:{{admission}}</strong> <span id="admission-no"></span></p>
+      <p><strong>Name:{{name}}</strong> <span id="name"></span></p>
+      <p><strong>Phone No:{{phone}}</strong> <span id="phone-no"></span></p>
+      <p><strong>Course:{{course}}</strong> <span id="course"></span></p>
+      <p><strong>Gender:{{gender}}</strong> <span id="gender"></span></p>
+      <p><strong>Email:{{email}}</strong> <span id="email"></span></p>
+    </div>
+    <form action="/submitdata" method="POST">
+      <button type="submit">Okay</button>
+      <button type="button" onclick="window.history.back()">Cancel</button>
+    </form>
+  </div>
+</body>
+</html>
