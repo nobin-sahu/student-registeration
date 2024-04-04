@@ -10,6 +10,7 @@ This project is a student registration portal built using Node.js, Express.js, M
 - **HTML and CSS:** Client-side languages for designing and styling the web pages.
 - **Handlebars (hbs):** A template engine used for dynamic rendering of HTML pages.
 - **Partials:** Used to reuse code for common components across different pages.
+- **bcryptjs:** Used to provides secure password hashing.
 
 ### How to Run:
 
