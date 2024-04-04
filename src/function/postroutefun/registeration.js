@@ -2,6 +2,9 @@
 const {validateEmail,validatePassword}=require("../validationfun.js");
 const {toLowerCase}=require("../stringfun.js");
 
+// for hashing to store the password in database 
+const bcrypt=require("bcryptjs");
+
 // mongodb schema 
 const stu_schema=require("../../models/s_schema.js");
 
@@ -35,6 +38,10 @@ async function register(req,res){
             }  )
         } 
         else{
+
+            // we are storing hashpassword in the database
+            password=await bcrypt.hashSync(password,10);
+
             res.render("submitted",{admission,name,phone,course,gender,email});
         }
         

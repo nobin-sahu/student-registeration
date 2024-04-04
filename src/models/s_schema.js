@@ -50,14 +50,14 @@ const student_schema = new mongoose.Schema({
         type:String,
         required:true,
         trim:true,
-        min:4,
-        validate: {
-            validator: function(value) {
-                // Check if the password contains at least one capital letter, one number, and one special character
-                return /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{4,}$/.test(value);
-            },
-            message: props => 'Password must contain at least one capital letter, one number, and one special character!'
-        }
+        min:4
+        // validate: {
+        //     validator: function(value) {
+        //         // Check if the password contains at least one capital letter, one number, and one special character
+        //         return /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{4,}$/.test(value);
+        //     },
+        //     message: props => 'Password must contain at least one capital letter, one number, and one special character!'
+        // }
     }
 })
 
